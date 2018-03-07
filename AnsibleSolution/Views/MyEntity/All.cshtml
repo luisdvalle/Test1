@@ -13,7 +13,7 @@
     <tr>
         <td>@entity.MyEntityId</td>
         <td>@entity.Name</td>
-        <td>@entity.Details</td>
+        <td>@Html.ActionLink("More...", "Id", "MyEntity", new { id = entity.MyEntityId })</td>
     </tr>
     }
 </table>
