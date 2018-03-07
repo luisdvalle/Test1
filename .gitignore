@@ -218,3 +218,4 @@ pip-log.txt
 .vs/AnsibleSolution/v15/Server/sqlite3/storage.ide
 *.ide-shm
 .vs/AnsibleSolution/v15/Server/sqlite3/storage.ide-wal
+.vs/config/applicationhost.config
