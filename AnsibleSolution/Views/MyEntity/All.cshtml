@@ -1,7 +1,15 @@
-﻿
-@{
-    ViewData["Title"] = "All";
-}
+﻿@model List<AnsibleSolution.Models.MyEntity>
 
 <h2>All Entities</h2>
+
+<table>
+    @foreach (var entity in Model)
+    {
+    <tr>
+        <td>@entity.MyEntityId</td>
+        <td>@entity.Name</td>
+        <td>@entity.Details</td>
+    </tr>
+    }
+</table>
 

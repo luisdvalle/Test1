@@ -1,7 +1,12 @@
-﻿
-@{
-    ViewData["Title"] = "Add";
-}
+﻿@model AnsibleSolution.Models.MyEntity
 
 <h2>Add Entity</h2>
+
+<form method="post">
+    <label>Name</label>
+    <input asp-for="Name" /><br />
+    <label>Details</label>
+    <input asp-for="Details" /><br />
+    <input type="submit" value="Send" />
+</form>
 
