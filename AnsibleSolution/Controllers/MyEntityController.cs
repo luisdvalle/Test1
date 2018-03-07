@@ -19,12 +19,16 @@ namespace AnsibleSolution.Controllers
 
         public IActionResult All()
         {
-            return View();
+            var entities = _myEntityService.GetAllEntities();
+
+            return View(entities);
         }
 
         public IActionResult Id(int id)
         {
-            return View();
+            var entity = _myEntityService.GetEntityById(id);
+
+            return View(entity);
         }
 
         [HttpGet]
@@ -34,9 +38,11 @@ namespace AnsibleSolution.Controllers
         }
 
         [HttpPost]
-        public void Add(MyEntity entity)
+        public IActionResult Add(MyEntity entity)
         {
+            _myEntityService.AddEntity(entity);
 
+            return RedirectToAction(@"../Home/Index");
         }
     }
 }
